@@ -37,11 +37,13 @@ La reproduction dans un dossier neuf utilise le même poste Windows et le cache 
 téléchargement uv, mais un nouvel environnement Python et une nouvelle base DuckDB.
 Elle ne constitue pas un test sur un autre système d'exploitation.
 
-## Éléments en attente
+## GitHub et suites du case
 
 - Identité locale Git : `Tridog21`, adresse GitHub noreply liée à l'identifiant public du compte.
 - Dépôt distant configuré : https://github.com/Tridog21/tech_case_repo.git, branche `main`.
-- Résultats du workflow Windows/Linux/macOS à consulter dans l'onglet Actions du dépôt.
+- Workflow réussi sur Windows, Linux et macOS pour le commit `94870f4` :
+  https://github.com/Tridog21/tech_case_repo/actions/runs/38594905012.
+- Parcours du README également réussi depuis un clone du dépôt distant sous Windows.
 - Rapport métier et adaptation des modèles à réaliser lorsque les consignes seront connues.
 
 Docker, PostgreSQL et les outils BI restent conditionnels aux exigences du case.
