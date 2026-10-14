@@ -1,0 +1,33 @@
+version: 2
+models:
+  - name: stg_orders
+    description: Orders with explicit types; cancelled orders are preserved.
+    columns:
+      - name: order_id
+        description: Unique order identifier.
+        data_tests: [unique, not_null]
+      - name: customer_id
+        description: Customer identifier; no customer dimension supplied in this demo.
+        data_tests: [not_null]
+      - name: order_date
+        description: Business date of the order.
+        data_tests: [not_null]
+      - name: amount
+        description: Nonnegative amount in demo currency, stored as DECIMAL(12,2).
+        data_tests: [not_null]
+      - name: status
+        description: Completed orders contribute to revenue; cancelled orders do not.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [completed, cancelled]
+  - name: daily_revenue
+    description: Revenue and order count for completed orders, aggregated by business date.
+    columns:
+      - name: order_date
+        data_tests: [unique, not_null]
+      - name: completed_orders
+        data_tests: [not_null]
+      - name: revenue
+        data_tests: [not_null]

@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: orders
+        description: Validated CSV import; one row per order.
+        columns:
+          - name: order_id
+            data_tests: [unique, not_null]

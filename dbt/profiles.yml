@@ -1,0 +1,8 @@
+analytics_case:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('CASE_DB_PATH') }}"
+      schema: analytics
+      threads: 1

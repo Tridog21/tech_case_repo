@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Case: installer les dépendances",
+      "type": "process",
+      "command": "uv",
+      "args": ["sync", "--locked"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Case: reproduire et tout tester",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "--locked", "python", "scripts/case.py", "demo"],
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Case: ouvrir la documentation dbt",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "--locked", "python", "scripts/case.py", "docs"],
+      "problemMatcher": []
+    }
+  ]
+}

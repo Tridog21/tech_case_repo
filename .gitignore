@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+warehouse/
+data/raw/*
+!data/raw/.gitkeep
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+reports/generated/
+*.duckdb
+*.duckdb.wal
